@@ -1,0 +1,159 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/bp
+vcount_and_reset
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1654339290
+!i10b 1
+!s100 aU:FRcN8121zImBKeP?^e3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I0KCR]I4?TiQM4EdR8G][D1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 d/home/bp/Desktop/GroupProject/Dice/simulation
+w1654328379
+8/home/bp/Desktop/GroupProject/Dice/count_and_reset.sv
+F/home/bp/Desktop/GroupProject/Dice/count_and_reset.sv
+!i122 14
+L0 1 23
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1654339290.000000
+!s107 /home/bp/Desktop/GroupProject/Dice/count_and_reset.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/bp/Desktop/GroupProject/Dice/count_and_reset.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vcounter
+R0
+!s110 1654322210
+!i10b 1
+!s100 8EE^?H;@V_he5;YjA<17V2
+R2
+IoI8Xb08abUh1f]UZO64ed1
+R3
+S1
+R4
+w1652761019
+8/home/bp/Desktop/GroupProject/Dice/counter.sv
+F/home/bp/Desktop/GroupProject/Dice/counter.sv
+!i122 0
+L0 1 10
+R5
+r1
+!s85 0
+31
+!s108 1654322209.000000
+!s107 /home/bp/Desktop/GroupProject/Dice/counter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/bp/Desktop/GroupProject/Dice/counter.sv|
+!i113 1
+R7
+R8
+vdice_state
+R0
+R1
+!i10b 1
+!s100 NGIi=`J2ze`h=JgbeKdYQ3
+R2
+IJa6c`NP0SLZ?`Ma]PW0hR3
+R3
+S1
+R4
+w1654339150
+8/home/bp/Desktop/GroupProject/Dice/output_files/dice_state.sv
+F/home/bp/Desktop/GroupProject/Dice/output_files/dice_state.sv
+!i122 16
+L0 1 18
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/bp/Desktop/GroupProject/Dice/output_files/dice_state.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/bp/Desktop/GroupProject/Dice/output_files/dice_state.sv|
+!i113 1
+R7
+R8
+vseg_spin
+R0
+!s110 1654322593
+!i10b 1
+!s100 `TEo_MPARb<dAN7i`1JaL1
+R2
+I`XJh7=k<eQl0Zcnfc]6N73
+R3
+S1
+R4
+w1654322586
+8/home/bp/Desktop/GroupProject/Dice/seg_spin.sv
+F/home/bp/Desktop/GroupProject/Dice/seg_spin.sv
+!i122 1
+L0 1 43
+R5
+r1
+!s85 0
+31
+!s108 1654322593.000000
+!s107 /home/bp/Desktop/GroupProject/Dice/seg_spin.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/bp/Desktop/GroupProject/Dice/seg_spin.sv|
+!i113 1
+R7
+R8
+vsegment_spin
+!s110 1654328134
+!i10b 1
+!s100 8?FP@^_KXnhLAK[?hX4;G2
+R2
+I<73B?7F3DoDK0:V?6RV9k3
+R3
+R4
+w1654328126
+8/home/bp/Desktop/GroupProject/Dice/output_files/segment_spin.v
+F/home/bp/Desktop/GroupProject/Dice/output_files/segment_spin.v
+!i122 13
+L0 20 32
+R5
+r1
+!s85 0
+31
+!s108 1654328134.000000
+!s107 /home/bp/Desktop/GroupProject/Dice/output_files/segment_spin.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/bp/Desktop/GroupProject/Dice/output_files/segment_spin.v|
+!i113 1
+o-work work
+R8
+vspin_state
+R0
+R1
+!i10b 1
+!s100 b=z4[4?D4iiM7U7@>5JeQ0
+R2
+IO;?AF;WAiZgbCi6DEP;P[3
+R3
+S1
+R4
+w1654328574
+8/home/bp/Desktop/GroupProject/Dice/spin_state.sv
+F/home/bp/Desktop/GroupProject/Dice/spin_state.sv
+!i122 15
+L0 1 17
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/bp/Desktop/GroupProject/Dice/spin_state.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|/home/bp/Desktop/GroupProject/Dice/spin_state.sv|
+!i113 1
+R7
+R8

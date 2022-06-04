@@ -1,0 +1,4 @@
+module seg_spin(
+	input logic CLK,
+	output logic[0:6] DISP
+)

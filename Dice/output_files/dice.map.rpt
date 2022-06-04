@@ -1,0 +1,1390 @@
+Analysis & Synthesis report for dice
+Sat Jun  4 03:54:35 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: BUSMUX:inst38
+ 11. Parameter Settings for User Entity Instance: BUSMUX:inst26
+ 12. Parameter Settings for User Entity Instance: segment_spin:inst13|count_and_reset:inst
+ 13. Parameter Settings for User Entity Instance: segment_spin:inst13|count_and_reset:inst|counter:CNT
+ 14. Parameter Settings for User Entity Instance: count_and_reset:inst2
+ 15. Parameter Settings for User Entity Instance: count_and_reset:inst2|counter:CNT
+ 16. Parameter Settings for User Entity Instance: variable_dff:inst19
+ 17. Parameter Settings for User Entity Instance: rand_10:inst
+ 18. Parameter Settings for User Entity Instance: rand_10:inst|hash:genNum
+ 19. Parameter Settings for User Entity Instance: rand_10:inst|hash:genNum|counter:CNT
+ 20. Parameter Settings for User Entity Instance: BUSMUX:inst37
+ 21. Parameter Settings for User Entity Instance: BUSMUX:inst27
+ 22. Parameter Settings for User Entity Instance: variable_dff:inst20
+ 23. Parameter Settings for User Entity Instance: rand_10:inst6
+ 24. Parameter Settings for User Entity Instance: rand_10:inst6|hash:genNum
+ 25. Parameter Settings for User Entity Instance: rand_10:inst6|hash:genNum|counter:CNT
+ 26. Parameter Settings for User Entity Instance: BUSMUX:inst36
+ 27. Parameter Settings for User Entity Instance: BUSMUX:inst28
+ 28. Parameter Settings for User Entity Instance: variable_dff:inst21
+ 29. Parameter Settings for User Entity Instance: rand_10:inst7
+ 30. Parameter Settings for User Entity Instance: rand_10:inst7|hash:genNum
+ 31. Parameter Settings for User Entity Instance: rand_10:inst7|hash:genNum|counter:CNT
+ 32. Parameter Settings for User Entity Instance: count_and_reset:inst11
+ 33. Parameter Settings for User Entity Instance: count_and_reset:inst11|counter:CNT
+ 34. Parameter Settings for User Entity Instance: BUSMUX:inst35
+ 35. Parameter Settings for User Entity Instance: BUSMUX:inst29
+ 36. Parameter Settings for User Entity Instance: variable_dff:inst22
+ 37. Parameter Settings for User Entity Instance: rand_10:inst8
+ 38. Parameter Settings for User Entity Instance: rand_10:inst8|hash:genNum
+ 39. Parameter Settings for User Entity Instance: rand_10:inst8|hash:genNum|counter:CNT
+ 40. Parameter Settings for User Entity Instance: BUSMUX:inst34
+ 41. Parameter Settings for User Entity Instance: BUSMUX:inst30
+ 42. Parameter Settings for User Entity Instance: variable_dff:inst23
+ 43. Parameter Settings for User Entity Instance: rand_10:inst9
+ 44. Parameter Settings for User Entity Instance: rand_10:inst9|hash:genNum
+ 45. Parameter Settings for User Entity Instance: rand_10:inst9|hash:genNum|counter:CNT
+ 46. Parameter Settings for User Entity Instance: BUSMUX:inst33
+ 47. Parameter Settings for User Entity Instance: BUSMUX:inst31
+ 48. Parameter Settings for User Entity Instance: variable_dff:inst24
+ 49. Parameter Settings for User Entity Instance: rand_10:inst10
+ 50. Parameter Settings for User Entity Instance: rand_10:inst10|hash:genNum
+ 51. Parameter Settings for User Entity Instance: rand_10:inst10|hash:genNum|counter:CNT
+ 52. Parameter Settings for Inferred Entity Instance: rand_10:inst|lpm_divide:Mod0
+ 53. Parameter Settings for Inferred Entity Instance: rand_10:inst6|lpm_divide:Mod0
+ 54. Parameter Settings for Inferred Entity Instance: rand_10:inst7|lpm_divide:Mod0
+ 55. Parameter Settings for Inferred Entity Instance: rand_10:inst8|lpm_divide:Mod0
+ 56. Parameter Settings for Inferred Entity Instance: rand_10:inst9|lpm_divide:Mod0
+ 57. Parameter Settings for Inferred Entity Instance: rand_10:inst10|lpm_divide:Mod0
+ 58. Port Connectivity Checks: "rand_10:inst10|sevenseg:segment"
+ 59. Port Connectivity Checks: "rand_10:inst10|hash:genNum|counter:CNT"
+ 60. Port Connectivity Checks: "rand_10:inst9|sevenseg:segment"
+ 61. Port Connectivity Checks: "rand_10:inst9|hash:genNum|counter:CNT"
+ 62. Port Connectivity Checks: "rand_10:inst7|sevenseg:segment"
+ 63. Port Connectivity Checks: "rand_10:inst7|hash:genNum|counter:CNT"
+ 64. Port Connectivity Checks: "rand_10:inst6|sevenseg:segment"
+ 65. Port Connectivity Checks: "rand_10:inst6|hash:genNum|counter:CNT"
+ 66. Port Connectivity Checks: "rand_10:inst|sevenseg:segment"
+ 67. Port Connectivity Checks: "rand_10:inst|hash:genNum|counter:CNT"
+ 68. Post-Synthesis Netlist Statistics for Top Partition
+ 69. Elapsed Time Per Partition
+ 70. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Jun  4 03:54:35 2022       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                      ; dice                                        ;
+; Top-level Entity Name              ; dice                                        ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 210                                         ;
+;     Total combinational functions  ; 209                                         ;
+;     Dedicated logic registers      ; 81                                          ;
+; Total registers                    ; 81                                          ;
+; Total pins                         ; 51                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; dice               ; dice               ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; dice.bdf                         ; yes             ; User Block Diagram/Schematic File  ; /home/bp/Desktop/GroupProject/Dice/dice.bdf                             ;         ;
+; count_and_reset.sv               ; yes             ; User SystemVerilog HDL File        ; /home/bp/Desktop/GroupProject/Dice/count_and_reset.sv                   ;         ;
+; output_files/segment_spin.bdf    ; yes             ; User Block Diagram/Schematic File  ; /home/bp/Desktop/GroupProject/Dice/output_files/segment_spin.bdf        ;         ;
+; spin_state.sv                    ; yes             ; User SystemVerilog HDL File        ; /home/bp/Desktop/GroupProject/Dice/spin_state.sv                        ;         ;
+; output_files/hash.sv             ; yes             ; User SystemVerilog HDL File        ; /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv                 ;         ;
+; output_files/rand_10.sv          ; yes             ; User SystemVerilog HDL File        ; /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv              ;         ;
+; variable_dff.sv                  ; yes             ; User SystemVerilog HDL File        ; /home/bp/Desktop/GroupProject/Dice/variable_dff.sv                      ;         ;
+; output_files/dice_state.sv       ; yes             ; User SystemVerilog HDL File        ; /home/bp/Desktop/GroupProject/Dice/output_files/dice_state.sv           ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/busmux.tdf          ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/lpm_mux.inc         ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/lpm_mux.tdf         ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/aglobal211.inc      ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/muxlut.inc          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/altshift.inc        ;         ;
+; db/mux_36c.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/bp/Desktop/GroupProject/Dice/db/mux_36c.tdf                       ;         ;
+; counter.sv                       ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/bp/Desktop/GroupProject/Dice/counter.sv                           ;         ;
+; sevenseg.sv                      ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/bp/Desktop/GroupProject/Dice/sevenseg.sv                          ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; /opt/intelFPGA/21.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; db/lpm_divide_8kl.tdf            ; yes             ; Auto-Generated Megafunction        ; /home/bp/Desktop/GroupProject/Dice/db/lpm_divide_8kl.tdf                ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction        ; /home/bp/Desktop/GroupProject/Dice/db/sign_div_unsign_7kh.tdf           ;         ;
+; db/alt_u_div_oee.tdf             ; yes             ; Auto-Generated Megafunction        ; /home/bp/Desktop/GroupProject/Dice/db/alt_u_div_oee.tdf                 ;         ;
+; db/add_sub_t3c.tdf               ; yes             ; Auto-Generated Megafunction        ; /home/bp/Desktop/GroupProject/Dice/db/add_sub_t3c.tdf                   ;         ;
+; db/add_sub_u3c.tdf               ; yes             ; Auto-Generated Megafunction        ; /home/bp/Desktop/GroupProject/Dice/db/add_sub_u3c.tdf                   ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 210                      ;
+;                                             ;                          ;
+; Total combinational functions               ; 209                      ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 116                      ;
+;     -- 3 input functions                    ; 29                       ;
+;     -- <=2 input functions                  ; 64                       ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 165                      ;
+;     -- arithmetic mode                      ; 44                       ;
+;                                             ;                          ;
+; Total registers                             ; 81                       ;
+;     -- Dedicated logic registers            ; 81                       ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 51                       ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; dice_state:inst5|num_enb ;
+; Maximum fan-out                             ; 44                       ;
+; Total fan-out                               ; 984                      ;
+; Average fan-out                             ; 2.51                     ;
++---------------------------------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                        ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                  ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |dice                                     ; 209 (0)             ; 81 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 51   ; 0            ; 0          ; |dice                                                                                                                ; dice                ; work         ;
+;    |busmux:inst26|                        ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst26                                                                                                  ; busmux              ; work         ;
+;       |lpm_mux:$00000|                    ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst26|lpm_mux:$00000                                                                                   ; lpm_mux             ; work         ;
+;          |mux_36c:auto_generated|         ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst26|lpm_mux:$00000|mux_36c:auto_generated                                                            ; mux_36c             ; work         ;
+;    |busmux:inst33|                        ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst33                                                                                                  ; busmux              ; work         ;
+;       |lpm_mux:$00000|                    ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst33|lpm_mux:$00000                                                                                   ; lpm_mux             ; work         ;
+;          |mux_36c:auto_generated|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst33|lpm_mux:$00000|mux_36c:auto_generated                                                            ; mux_36c             ; work         ;
+;    |busmux:inst34|                        ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst34                                                                                                  ; busmux              ; work         ;
+;       |lpm_mux:$00000|                    ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst34|lpm_mux:$00000                                                                                   ; lpm_mux             ; work         ;
+;          |mux_36c:auto_generated|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst34|lpm_mux:$00000|mux_36c:auto_generated                                                            ; mux_36c             ; work         ;
+;    |busmux:inst35|                        ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst35                                                                                                  ; busmux              ; work         ;
+;       |lpm_mux:$00000|                    ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst35|lpm_mux:$00000                                                                                   ; lpm_mux             ; work         ;
+;          |mux_36c:auto_generated|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst35|lpm_mux:$00000|mux_36c:auto_generated                                                            ; mux_36c             ; work         ;
+;    |busmux:inst36|                        ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst36                                                                                                  ; busmux              ; work         ;
+;       |lpm_mux:$00000|                    ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst36|lpm_mux:$00000                                                                                   ; lpm_mux             ; work         ;
+;          |mux_36c:auto_generated|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst36|lpm_mux:$00000|mux_36c:auto_generated                                                            ; mux_36c             ; work         ;
+;    |busmux:inst37|                        ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst37                                                                                                  ; busmux              ; work         ;
+;       |lpm_mux:$00000|                    ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst37|lpm_mux:$00000                                                                                   ; lpm_mux             ; work         ;
+;          |mux_36c:auto_generated|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst37|lpm_mux:$00000|mux_36c:auto_generated                                                            ; mux_36c             ; work         ;
+;    |busmux:inst38|                        ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst38                                                                                                  ; busmux              ; work         ;
+;       |lpm_mux:$00000|                    ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst38|lpm_mux:$00000                                                                                   ; lpm_mux             ; work         ;
+;          |mux_36c:auto_generated|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|busmux:inst38|lpm_mux:$00000|mux_36c:auto_generated                                                            ; mux_36c             ; work         ;
+;    |count_and_reset:inst11|               ; 3 (1)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|count_and_reset:inst11                                                                                         ; count_and_reset     ; work         ;
+;       |counter:CNT|                       ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|count_and_reset:inst11|counter:CNT                                                                             ; counter             ; work         ;
+;    |count_and_reset:inst2|                ; 36 (12)             ; 24 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|count_and_reset:inst2                                                                                          ; count_and_reset     ; work         ;
+;       |counter:CNT|                       ; 24 (24)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|count_and_reset:inst2|counter:CNT                                                                              ; counter             ; work         ;
+;    |dice_state:inst5|                     ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|dice_state:inst5                                                                                               ; dice_state          ; work         ;
+;    |rand_10:inst10|                       ; 20 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst10                                                                                                 ; rand_10             ; work         ;
+;       |hash:genNum|                       ; 6 (2)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst10|hash:genNum                                                                                     ; hash                ; work         ;
+;          |counter:CNT|                    ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst10|hash:genNum|counter:CNT                                                                         ; counter             ; work         ;
+;       |lpm_divide:Mod0|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst10|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_8kl:auto_generated|  ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst10|lpm_divide:Mod0|lpm_divide_8kl:auto_generated                                                   ; lpm_divide_8kl      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst10|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_oee:divider|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst10|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_oee:divider ; alt_u_div_oee       ; work         ;
+;       |sevenseg:segment|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst10|sevenseg:segment                                                                                ; sevenseg            ; work         ;
+;    |rand_10:inst6|                        ; 22 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst6                                                                                                  ; rand_10             ; work         ;
+;       |hash:genNum|                       ; 6 (2)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst6|hash:genNum                                                                                      ; hash                ; work         ;
+;          |counter:CNT|                    ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst6|hash:genNum|counter:CNT                                                                          ; counter             ; work         ;
+;       |lpm_divide:Mod0|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst6|lpm_divide:Mod0                                                                                  ; lpm_divide          ; work         ;
+;          |lpm_divide_8kl:auto_generated|  ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst6|lpm_divide:Mod0|lpm_divide_8kl:auto_generated                                                    ; lpm_divide_8kl      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst6|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider                        ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_oee:divider|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst6|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_oee:divider  ; alt_u_div_oee       ; work         ;
+;       |sevenseg:segment|                  ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst6|sevenseg:segment                                                                                 ; sevenseg            ; work         ;
+;    |rand_10:inst7|                        ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst7                                                                                                  ; rand_10             ; work         ;
+;       |hash:genNum|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst7|hash:genNum                                                                                      ; hash                ; work         ;
+;       |lpm_divide:Mod0|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst7|lpm_divide:Mod0                                                                                  ; lpm_divide          ; work         ;
+;          |lpm_divide_8kl:auto_generated|  ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst7|lpm_divide:Mod0|lpm_divide_8kl:auto_generated                                                    ; lpm_divide_8kl      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst7|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider                        ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_oee:divider|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst7|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_oee:divider  ; alt_u_div_oee       ; work         ;
+;       |sevenseg:segment|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst7|sevenseg:segment                                                                                 ; sevenseg            ; work         ;
+;    |rand_10:inst8|                        ; 19 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst8                                                                                                  ; rand_10             ; work         ;
+;       |hash:genNum|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst8|hash:genNum                                                                                      ; hash                ; work         ;
+;       |lpm_divide:Mod0|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst8|lpm_divide:Mod0                                                                                  ; lpm_divide          ; work         ;
+;          |lpm_divide_8kl:auto_generated|  ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst8|lpm_divide:Mod0|lpm_divide_8kl:auto_generated                                                    ; lpm_divide_8kl      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst8|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider                        ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_oee:divider|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst8|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_oee:divider  ; alt_u_div_oee       ; work         ;
+;       |sevenseg:segment|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst8|sevenseg:segment                                                                                 ; sevenseg            ; work         ;
+;    |rand_10:inst9|                        ; 19 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst9                                                                                                  ; rand_10             ; work         ;
+;       |hash:genNum|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst9|hash:genNum                                                                                      ; hash                ; work         ;
+;       |lpm_divide:Mod0|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst9|lpm_divide:Mod0                                                                                  ; lpm_divide          ; work         ;
+;          |lpm_divide_8kl:auto_generated|  ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst9|lpm_divide:Mod0|lpm_divide_8kl:auto_generated                                                    ; lpm_divide_8kl      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst9|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider                        ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_oee:divider|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst9|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_oee:divider  ; alt_u_div_oee       ; work         ;
+;       |sevenseg:segment|                  ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst9|sevenseg:segment                                                                                 ; sevenseg            ; work         ;
+;    |rand_10:inst|                         ; 18 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst                                                                                                   ; rand_10             ; work         ;
+;       |hash:genNum|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst|hash:genNum                                                                                       ; hash                ; work         ;
+;       |lpm_divide:Mod0|                   ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst|lpm_divide:Mod0                                                                                   ; lpm_divide          ; work         ;
+;          |lpm_divide_8kl:auto_generated|  ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst|lpm_divide:Mod0|lpm_divide_8kl:auto_generated                                                     ; lpm_divide_8kl      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider                         ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_oee:divider|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst|lpm_divide:Mod0|lpm_divide_8kl:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_oee:divider   ; alt_u_div_oee       ; work         ;
+;       |sevenseg:segment|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|rand_10:inst|sevenseg:segment                                                                                  ; sevenseg            ; work         ;
+;    |segment_spin:inst13|                  ; 5 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|segment_spin:inst13                                                                                            ; segment_spin        ; work         ;
+;       |count_and_reset:inst|              ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|segment_spin:inst13|count_and_reset:inst                                                                       ; count_and_reset     ; work         ;
+;          |counter:CNT|                    ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|segment_spin:inst13|count_and_reset:inst|counter:CNT                                                           ; counter             ; work         ;
+;       |spin_state:inst1|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|segment_spin:inst13|spin_state:inst1                                                                           ; spin_state          ; work         ;
+;    |variable_dff:inst19|                  ; 0 (0)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|variable_dff:inst19                                                                                            ; variable_dff        ; work         ;
+;    |variable_dff:inst20|                  ; 0 (0)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|variable_dff:inst20                                                                                            ; variable_dff        ; work         ;
+;    |variable_dff:inst21|                  ; 0 (0)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|variable_dff:inst21                                                                                            ; variable_dff        ; work         ;
+;    |variable_dff:inst22|                  ; 0 (0)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|variable_dff:inst22                                                                                            ; variable_dff        ; work         ;
+;    |variable_dff:inst23|                  ; 0 (0)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|variable_dff:inst23                                                                                            ; variable_dff        ; work         ;
+;    |variable_dff:inst24|                  ; 0 (0)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |dice|variable_dff:inst24                                                                                            ; variable_dff        ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                         ;
++-------------------------------------------------+----------------------------------------------------------+
+; Register name                                   ; Reason for Removal                                       ;
++-------------------------------------------------+----------------------------------------------------------+
+; rand_10:inst|hash:genNum|counter:CNT|q[0]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[0]   ;
+; rand_10:inst|hash:genNum|counter:CNT|q[1]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[1]   ;
+; rand_10:inst|hash:genNum|counter:CNT|q[2]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[2]   ;
+; rand_10:inst|hash:genNum|counter:CNT|q[3]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[3]   ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[0]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[0]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[0]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[0]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[0]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[0]  ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[1]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[1]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[1]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[1]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[1]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[1]  ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[2]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[2]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[2]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[2]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[2]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[2]  ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[3]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[3]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[3]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[3]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[3]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[3]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[31]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[31]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[30]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[30]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[29]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[29]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[28]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[28]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[27]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[27]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[26]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[26]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[25]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[25]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[24]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[24]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[23]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[23]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[22]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[22]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[21]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[21]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[20]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[20]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[19]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[19]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[18]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[18]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[17]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[17]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[16]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[16]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[15]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[15]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[14]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[14]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[13]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[13]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[12]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[12]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[11]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[11]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[10]      ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[10]  ;
+; rand_10:inst|hash:genNum|counter:CNT|q[9]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[9]   ;
+; rand_10:inst|hash:genNum|counter:CNT|q[8]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[8]   ;
+; rand_10:inst|hash:genNum|counter:CNT|q[7]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[7]   ;
+; rand_10:inst|hash:genNum|counter:CNT|q[6]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[6]   ;
+; rand_10:inst|hash:genNum|counter:CNT|q[5]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[5]   ;
+; rand_10:inst|hash:genNum|counter:CNT|q[4]       ; Merged with rand_10:inst6|hash:genNum|counter:CNT|q[4]   ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[31]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[31] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[31]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[31] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[31]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[31] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[30]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[30] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[30]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[30] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[30]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[30] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[29]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[29] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[29]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[29] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[29]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[29] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[28]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[28] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[28]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[28] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[28]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[28] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[27]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[27] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[27]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[27] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[27]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[27] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[26]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[26] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[26]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[26] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[26]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[26] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[25]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[25] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[25]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[25] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[25]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[25] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[24]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[24] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[24]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[24] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[24]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[24] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[23]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[23] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[23]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[23] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[23]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[23] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[22]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[22] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[22]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[22] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[22]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[22] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[21]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[21] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[21]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[21] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[21]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[21] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[20]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[20] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[20]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[20] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[20]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[20] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[19]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[19] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[19]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[19] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[19]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[19] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[18]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[18] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[18]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[18] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[18]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[18] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[17]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[17] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[17]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[17] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[17]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[17] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[16]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[16] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[16]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[16] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[16]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[16] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[15]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[15] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[15]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[15] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[15]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[15] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[14]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[14] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[14]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[14] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[14]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[14] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[13]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[13] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[13]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[13] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[13]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[13] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[12]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[12] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[12]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[12] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[12]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[12] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[11]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[11] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[11]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[11] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[11]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[11] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[10]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[10] ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[10]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[10] ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[10]     ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[10] ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[9]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[9]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[9]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[9]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[9]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[9]  ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[8]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[8]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[8]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[8]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[8]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[8]  ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[7]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[7]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[7]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[7]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[7]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[7]  ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[6]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[6]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[6]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[6]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[6]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[6]  ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[5]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[5]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[5]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[5]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[5]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[5]  ;
+; rand_10:inst7|hash:genNum|counter:CNT|q[4]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[4]  ;
+; rand_10:inst8|hash:genNum|counter:CNT|q[4]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[4]  ;
+; rand_10:inst9|hash:genNum|counter:CNT|q[4]      ; Merged with rand_10:inst10|hash:genNum|counter:CNT|q[4]  ;
+; rand_10:inst6|hash:genNum|counter:CNT|q[4..31]  ; Lost fanout                                              ;
+; rand_10:inst10|hash:genNum|counter:CNT|q[4..31] ; Lost fanout                                              ;
+; Total Number of Removed Registers = 184         ;                                                          ;
++-------------------------------------------------+----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 81    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 71    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst38 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst26 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: segment_spin:inst13|count_and_reset:inst ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                               ;
+; RES            ; 5     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: segment_spin:inst13|count_and_reset:inst|counter:CNT ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: count_and_reset:inst2 ;
++----------------+---------+-----------------------------------------+
+; Parameter Name ; Value   ; Type                                    ;
++----------------+---------+-----------------------------------------+
+; N              ; 24      ; Signed Integer                          ;
+; RES            ; 8000000 ; Signed Integer                          ;
++----------------+---------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: count_and_reset:inst2|counter:CNT ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 24    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: variable_dff:inst19 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 7     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; hashsize       ; 32    ; Signed Integer                   ;
+; seed           ; 3     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst|hash:genNum ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; N              ; 4     ; Signed Integer                               ;
+; hashsize       ; 32    ; Signed Integer                               ;
+; seed           ; 3     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst|hash:genNum|counter:CNT ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst37 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst27 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: variable_dff:inst20 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 7     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst6 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; hashsize       ; 32    ; Signed Integer                    ;
+; seed           ; 7     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst6|hash:genNum ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 4     ; Signed Integer                                ;
+; hashsize       ; 32    ; Signed Integer                                ;
+; seed           ; 7     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst6|hash:genNum|counter:CNT ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst36 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst28 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: variable_dff:inst21 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 7     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst7 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; hashsize       ; 32    ; Signed Integer                    ;
+; seed           ; 5     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst7|hash:genNum ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 4     ; Signed Integer                                ;
+; hashsize       ; 32    ; Signed Integer                                ;
+; seed           ; 5     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst7|hash:genNum|counter:CNT ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: count_and_reset:inst11 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; N              ; 2     ; Signed Integer                             ;
+; RES            ; 3     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: count_and_reset:inst11|counter:CNT ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 2     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst35 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst29 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: variable_dff:inst22 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 7     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst8 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; hashsize       ; 32    ; Signed Integer                    ;
+; seed           ; 7     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst8|hash:genNum ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 4     ; Signed Integer                                ;
+; hashsize       ; 32    ; Signed Integer                                ;
+; seed           ; 7     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst8|hash:genNum|counter:CNT ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst34 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst30 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: variable_dff:inst23 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 7     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst9 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; hashsize       ; 32    ; Signed Integer                    ;
+; seed           ; 13    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst9|hash:genNum ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 4     ; Signed Integer                                ;
+; hashsize       ; 32    ; Signed Integer                                ;
+; seed           ; 13    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst9|hash:genNum|counter:CNT ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst33 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Untyped                           ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst31 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 7     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: variable_dff:inst24 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 7     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst10 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; hashsize       ; 32    ; Signed Integer                     ;
+; seed           ; 11    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst10|hash:genNum ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 4     ; Signed Integer                                 ;
+; hashsize       ; 32    ; Signed Integer                                 ;
+; seed           ; 11    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rand_10:inst10|hash:genNum|counter:CNT ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rand_10:inst|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_8kl ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rand_10:inst6|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------+
+; Parameter Name         ; Value          ; Type                                 ;
++------------------------+----------------+--------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                              ;
+; CBXI_PARAMETER         ; lpm_divide_8kl ; Untyped                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                       ;
++------------------------+----------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rand_10:inst7|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------+
+; Parameter Name         ; Value          ; Type                                 ;
++------------------------+----------------+--------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                              ;
+; CBXI_PARAMETER         ; lpm_divide_8kl ; Untyped                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                       ;
++------------------------+----------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rand_10:inst8|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------+
+; Parameter Name         ; Value          ; Type                                 ;
++------------------------+----------------+--------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                              ;
+; CBXI_PARAMETER         ; lpm_divide_8kl ; Untyped                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                       ;
++------------------------+----------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rand_10:inst9|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------+
+; Parameter Name         ; Value          ; Type                                 ;
++------------------------+----------------+--------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                              ;
+; LPM_WIDTHD             ; 4              ; Untyped                              ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                              ;
+; LPM_PIPELINE           ; 0              ; Untyped                              ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                              ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                              ;
+; CBXI_PARAMETER         ; lpm_divide_8kl ; Untyped                              ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                              ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                       ;
++------------------------+----------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rand_10:inst10|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_8kl ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst10|sevenseg:segment"                                                                                                                                                  ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst10|hash:genNum|counter:CNT"                                                                                                                                                 ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; d         ; Input  ; Warning  ; Input port expression (33 bits) is wider than the input port (32 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; q         ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (33 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst9|sevenseg:segment"                                                                                                                                                   ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst9|hash:genNum|counter:CNT"                                                                                                                                                  ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; d         ; Input  ; Warning  ; Input port expression (33 bits) is wider than the input port (32 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; q         ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (33 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst7|sevenseg:segment"                                                                                                                                                   ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst7|hash:genNum|counter:CNT"                                                                                                                                                  ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; d         ; Input  ; Warning  ; Input port expression (33 bits) is wider than the input port (32 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; q         ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (33 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst6|sevenseg:segment"                                                                                                                                                   ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst6|hash:genNum|counter:CNT"                                                                                                                                                  ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; d         ; Input  ; Warning  ; Input port expression (33 bits) is wider than the input port (32 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; q         ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (33 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst|sevenseg:segment"                                                                                                                                                    ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rand_10:inst|hash:genNum|counter:CNT"                                                                                                                                                   ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; d         ; Input  ; Warning  ; Input port expression (33 bits) is wider than the input port (32 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; q         ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (33 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 51                          ;
+; cycloneiii_ff         ; 81                          ;
+;     CLR               ; 71                          ;
+;     plain             ; 10                          ;
+; cycloneiii_lcell_comb ; 209                         ;
+;     arith             ; 44                          ;
+;         2 data inputs ; 38                          ;
+;         3 data inputs ; 6                           ;
+;     normal            ; 165                         ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 116                         ;
+;                       ;                             ;
+; Max LUT depth         ; 6.10                        ;
+; Average LUT depth     ; 3.46                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Sat Jun  4 03:54:26 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dice -c dice
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file seg_spin.sv
+    Info (12023): Found entity 1: seg_spin File: /home/bp/Desktop/GroupProject/Dice/seg_spin.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dice.bdf
+    Info (12023): Found entity 1: dice
+Info (12021): Found 1 design units, including 1 entities, in source file count_and_reset.sv
+    Info (12023): Found entity 1: count_and_reset File: /home/bp/Desktop/GroupProject/Dice/count_and_reset.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/segment_spin.bdf
+    Info (12023): Found entity 1: segment_spin
+Info (12021): Found 1 design units, including 1 entities, in source file spin_state.sv
+    Info (12023): Found entity 1: spin_state File: /home/bp/Desktop/GroupProject/Dice/spin_state.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/hash.sv
+    Info (12023): Found entity 1: hash File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/rand_10.sv
+    Info (12023): Found entity 1: rand_10 File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file variable_dff.sv
+    Info (12023): Found entity 1: variable_dff File: /home/bp/Desktop/GroupProject/Dice/variable_dff.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dice-edits.bdf
+    Info (12023): Found entity 1: dice-edits
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/dice_state.sv
+    Info (12023): Found entity 1: dice_state File: /home/bp/Desktop/GroupProject/Dice/output_files/dice_state.sv Line: 1
+Info (12127): Elaborating entity "dice" for the top level hierarchy
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst38"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst38"
+Info (12133): Instantiated megafunction "BUSMUX:inst38" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "7"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst38|lpm_mux:$00000" File: /opt/intelFPGA/21.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12131): Elaborated megafunction instantiation "BUSMUX:inst38|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst38" File: /opt/intelFPGA/21.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_36c.tdf
+    Info (12023): Found entity 1: mux_36c File: /home/bp/Desktop/GroupProject/Dice/db/mux_36c.tdf Line: 23
+Info (12128): Elaborating entity "mux_36c" for hierarchy "BUSMUX:inst38|lpm_mux:$00000|mux_36c:auto_generated" File: /opt/intelFPGA/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst26"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst26"
+Info (12133): Instantiated megafunction "BUSMUX:inst26" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "7"
+Info (12128): Elaborating entity "dice_state" for hierarchy "dice_state:inst5"
+Info (12128): Elaborating entity "segment_spin" for hierarchy "segment_spin:inst13"
+Info (12128): Elaborating entity "spin_state" for hierarchy "segment_spin:inst13|spin_state:inst1"
+Info (12128): Elaborating entity "count_and_reset" for hierarchy "segment_spin:inst13|count_and_reset:inst"
+Warning (12125): Using design file counter.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: counter File: /home/bp/Desktop/GroupProject/Dice/counter.sv Line: 1
+Info (12128): Elaborating entity "counter" for hierarchy "segment_spin:inst13|count_and_reset:inst|counter:CNT" File: /home/bp/Desktop/GroupProject/Dice/count_and_reset.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at counter.sv(9): truncated value with size 32 to match size of target (4) File: /home/bp/Desktop/GroupProject/Dice/counter.sv Line: 9
+Info (12128): Elaborating entity "count_and_reset" for hierarchy "count_and_reset:inst2"
+Info (12128): Elaborating entity "counter" for hierarchy "count_and_reset:inst2|counter:CNT" File: /home/bp/Desktop/GroupProject/Dice/count_and_reset.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at counter.sv(9): truncated value with size 32 to match size of target (24) File: /home/bp/Desktop/GroupProject/Dice/counter.sv Line: 9
+Info (12128): Elaborating entity "variable_dff" for hierarchy "variable_dff:inst19"
+Info (12128): Elaborating entity "rand_10" for hierarchy "rand_10:inst"
+Info (12128): Elaborating entity "hash" for hierarchy "rand_10:inst|hash:genNum" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 11
+Warning (10230): Verilog HDL assignment warning at hash.sv(16): truncated value with size 33 to match size of target (4) File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 16
+Info (12128): Elaborating entity "counter" for hierarchy "rand_10:inst|hash:genNum|counter:CNT" File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 13
+Warning (12125): Using design file sevenseg.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: sevenseg File: /home/bp/Desktop/GroupProject/Dice/sevenseg.sv Line: 1
+Info (12128): Elaborating entity "sevenseg" for hierarchy "rand_10:inst|sevenseg:segment" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 18
+Info (12128): Elaborating entity "rand_10" for hierarchy "rand_10:inst6"
+Info (12128): Elaborating entity "hash" for hierarchy "rand_10:inst6|hash:genNum" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 11
+Warning (10230): Verilog HDL assignment warning at hash.sv(16): truncated value with size 33 to match size of target (4) File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 16
+Info (12128): Elaborating entity "rand_10" for hierarchy "rand_10:inst7"
+Info (12128): Elaborating entity "hash" for hierarchy "rand_10:inst7|hash:genNum" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 11
+Warning (10230): Verilog HDL assignment warning at hash.sv(16): truncated value with size 33 to match size of target (4) File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 16
+Info (12128): Elaborating entity "count_and_reset" for hierarchy "count_and_reset:inst11"
+Info (12128): Elaborating entity "counter" for hierarchy "count_and_reset:inst11|counter:CNT" File: /home/bp/Desktop/GroupProject/Dice/count_and_reset.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at counter.sv(9): truncated value with size 32 to match size of target (2) File: /home/bp/Desktop/GroupProject/Dice/counter.sv Line: 9
+Info (12128): Elaborating entity "rand_10" for hierarchy "rand_10:inst9"
+Info (12128): Elaborating entity "hash" for hierarchy "rand_10:inst9|hash:genNum" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 11
+Warning (10230): Verilog HDL assignment warning at hash.sv(16): truncated value with size 33 to match size of target (4) File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 16
+Info (12128): Elaborating entity "rand_10" for hierarchy "rand_10:inst10"
+Info (12128): Elaborating entity "hash" for hierarchy "rand_10:inst10|hash:genNum" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 11
+Warning (10230): Verilog HDL assignment warning at hash.sv(16): truncated value with size 33 to match size of target (4) File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 16
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "rand_10:inst10|hash:genNum|data[32]" is missing source, defaulting to GND File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 6
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "rand_10:inst9|hash:genNum|data[32]" is missing source, defaulting to GND File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 6
+Warning (12020): Port "data" on the entity instantiation of "segment" is connected to a signal of width 32. The formal width of the signal in the module is 4.  The extra bits will be ignored. File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 18
+Warning (12020): Port "d" on the entity instantiation of "CNT" is connected to a signal of width 33. The formal width of the signal in the module is 32.  The extra bits will be ignored. File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 13
+Warning (12030): Port "q" on the entity instantiation of "CNT" is connected to a signal of width 33. The formal width of the signal in the module is 32.  The extra bits will be left dangling without any fan-out logic. File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 13
+Warning (12020): Port "reset" on the entity instantiation of "CNT" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 13
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "rand_10:inst8|hash:genNum|data[32]" is missing source, defaulting to GND File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 6
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "rand_10:inst8|hash:genNum|data[32]" is missing source, defaulting to GND File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 6
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "rand_10:inst7|hash:genNum|data[32]" is missing source, defaulting to GND File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 6
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "rand_10:inst6|hash:genNum|data[32]" is missing source, defaulting to GND File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 6
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "rand_10:inst|hash:genNum|data[32]" is missing source, defaulting to GND File: /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv Line: 6
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rand_10:inst|Mod0" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rand_10:inst6|Mod0" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rand_10:inst7|Mod0" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rand_10:inst8|Mod0" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rand_10:inst9|Mod0" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "rand_10:inst10|Mod0" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 16
+Info (12130): Elaborated megafunction instantiation "rand_10:inst|lpm_divide:Mod0" File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 16
+Info (12133): Instantiated megafunction "rand_10:inst|lpm_divide:Mod0" with the following parameter: File: /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv Line: 16
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8kl.tdf
+    Info (12023): Found entity 1: lpm_divide_8kl File: /home/bp/Desktop/GroupProject/Dice/db/lpm_divide_8kl.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: /home/bp/Desktop/GroupProject/Dice/db/sign_div_unsign_7kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_oee.tdf
+    Info (12023): Found entity 1: alt_u_div_oee File: /home/bp/Desktop/GroupProject/Dice/db/alt_u_div_oee.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
+    Info (12023): Found entity 1: add_sub_t3c File: /home/bp/Desktop/GroupProject/Dice/db/add_sub_t3c.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
+    Info (12023): Found entity 1: add_sub_u3c File: /home/bp/Desktop/GroupProject/Dice/db/add_sub_u3c.tdf Line: 23
+Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 56 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 263 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 212 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 438 megabytes
+    Info: Processing ended: Sat Jun  4 03:54:35 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:23
+
+

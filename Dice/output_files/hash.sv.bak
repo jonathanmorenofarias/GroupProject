@@ -1,0 +1,4 @@
+module hash #(parameter N=4, parameter hashsize=32) (
+	input logic CLK,
+	output logic[N-1:0] RAND
+);

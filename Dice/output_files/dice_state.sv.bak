@@ -1,0 +1,15 @@
+module dice_state (
+	input logic[5:0] switches,
+	input logic roll,
+	input logic clk,
+	input logic reset,
+	output logic spin_enb
+);
+
+reg[5:0] last_switches;
+
+always_ff @(posedge clk, negedge reset) begin
+	
+end
+
+endmodule
