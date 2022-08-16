@@ -1,0 +1,11 @@
+vsim -gui work.rand_10
+
+add wave -position insertpoint  \
+sim:/rand_10/clk \
+sim:/rand_10/RAND
+add wave -position insertpoint  \
+sim:/rand_10/genNum/data
+force -freeze sim:/rand_10/genNum/data 0 0
+force -freeze sim:/rand_10/clk 1 0, 0 {50 ps} -r 100
+run
+noforce sim:/rand_10/genNum/data

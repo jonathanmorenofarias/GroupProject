@@ -3,7 +3,7 @@ module hash #(parameter N=4, parameter hashsize=32, parameter seed=1) (
 	output logic[N-1:0] RAND
 );
 
-	wire[hashsize:0] data;
+	wire[hashsize-1:0] data;
 
 	counter CNT(
 		.clk (clk),

@@ -1,9 +1,23 @@
-/home/bp/Desktop/GroupProject/Dice/count_and_reset.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/count_and_reset.sv
+/home/bp/Desktop/GroupProject/Dice/variable_dff.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/variable_dff.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module variable_dff
+
+Top level modules:
+	variable_dff
+
+} {} {}} /home/bp/Desktop/GroupProject/Dice/count_and_reset.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/count_and_reset.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module count_and_reset
 
 Top level modules:
 	count_and_reset
+
+} {} {}} /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/output_files/hash.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module hash
+
+Top level modules:
+	hash
 
 } {} {}} /home/bp/Desktop/GroupProject/Dice/spin_state.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/spin_state.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -12,6 +26,20 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	spin_state
 
+} {} {}} /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/output_files/rand_10.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module rand_10
+
+Top level modules:
+	rand_10
+
+} {} {}} /home/bp/Desktop/GroupProject/Dice/output_files/dice_state.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/output_files/dice_state.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module dice_state
+
+Top level modules:
+	dice_state
+
 } {} {}} /home/bp/Desktop/GroupProject/Dice/output_files/segment_spin.v {1 {vlog -work work -stats=none /home/bp/Desktop/GroupProject/Dice/output_files/segment_spin.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module segment_spin
@@ -19,12 +47,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	segment_spin
 
-} {} {}} /home/bp/Desktop/GroupProject/Dice/counter.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/counter.sv
+} {} {}} /home/bp/Desktop/GroupProject/Dice/sevenseg.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/sevenseg.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module counter
+-- Compiling module sevenseg
 
 Top level modules:
-	counter
+	sevenseg
 
 } {} {}} /home/bp/Desktop/GroupProject/Dice/seg_spin.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/seg_spin.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -32,5 +60,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	seg_spin
+
+} {} {}} /home/bp/Desktop/GroupProject/Dice/counter.sv {1 {vlog -work work -sv -stats=none /home/bp/Desktop/GroupProject/Dice/counter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module counter
+
+Top level modules:
+	counter
 
 } {} {}}

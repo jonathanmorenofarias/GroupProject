@@ -1,0 +1,10 @@
+vsim -gui work.segment_spin
+
+add wave -position insertpoint  \
+sim:/segment_spin/CLK \
+sim:/segment_spin/RES \
+sim:/segment_spin/LED
+force -freeze sim:/segment_spin/CLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/segment_spin/RES 1 0
+run
+force -freeze sim:/segment_spin/RES 0 0
